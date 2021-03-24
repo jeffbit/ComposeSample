@@ -41,7 +41,7 @@ fun SearchViewToolBar() {
             TextField(
                 value = query.value,
                 onValueChange = { newValue ->
-                    query.value = newValue
+                     newValue
                 },
                 modifier = Modifier.fillMaxWidth(0.9F),
                 label = Text(text = "Search"),
@@ -49,12 +49,12 @@ fun SearchViewToolBar() {
                     keyboardType = KeyboardType.Text,
                     imeAction = Done
                 ),
-                leadingIcon = {
-                    Icon(
-                        imageVector = Icons.Filled.Search,
-                        contentDescription = null
-                    )
-                },
+//                leadingIcon = {
+//                    Icon(
+//                        imageVector = Icons.Filled.Search,
+//                        contentDescription = null
+//                    )
+//                },
                 onImeActionPerformed = { action: ImeAction, softwareKeyboardController: SoftwareKeyboardController ->
                     if (action == Search) {
 //                        add search fun from viewmodel
@@ -70,3 +70,5 @@ fun SearchViewToolBar() {
         }
     }
 }
+
+
